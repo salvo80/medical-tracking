@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'page-home',
@@ -8,14 +9,15 @@ import { NavController } from 'ionic-angular';
 export class HomePage {
   prodotto:string
   prezzo:number
-  lista:Array<string>
+  //lista:Array<string>
 
-  constructor(public navCtrl: NavController) {
-    this.lista = []
+  constructor(private storage: Storage, public navCtrl: NavController) {
+    //this.lista = []
   }
 
   add():void {
-    this.lista.unshift(this.prodotto + '-' + this.prezzo)
+    this.storage.set(this.prodotto, this.prezzo)
+    //this.lista.unshift(this.prodotto + '-' + this.prezzo)
     this.prodotto = ''
     this.prezzo = 0
   }
