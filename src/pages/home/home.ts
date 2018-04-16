@@ -23,7 +23,7 @@ export class HomePage {
   }
 
   getList(): Array<string>{
-    return this.lista
+    return []/*this.lista*/
   }
 
   getProduct(s:string): string {
@@ -35,8 +35,8 @@ export class HomePage {
   }
 
   getTotal():number{
-    if(this.lista.length==0)
+    //if(this.lista.length==0)
       return 0
-    return this.lista.map<number>((e)=>this.getPrice(e)).reduce( (prev, curr) => prev + curr)
+    //return this.lista.map<number>((e)=>this.getPrice(e)).reduce( (prev, curr) => prev + curr)
   }
 }
