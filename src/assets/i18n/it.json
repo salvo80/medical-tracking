@@ -1,0 +1,6 @@
+{
+  "APP":{
+    "TITLE":"MyApp",
+    "USERS":"There are {{number}} connected "
+  }
+}
