@@ -29,14 +29,10 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-<<<<<<< HEAD
     HomePage,
     TerapiaPage,
     FarmacoPopOverPage,
     AccountPage
-=======
-    AccountPage
->>>>>>> ac6876fa1cf3cd45365f72d3522857c2175f9917
   ],
   providers: [
     StatusBar,
