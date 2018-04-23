@@ -7,11 +7,15 @@ import { FormsModule } from '@angular/forms';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { IonicStorageModule } from '@ionic/storage';
+import { TerapiaPage } from '../pages/terapia/terapia';
+import { FarmacoPopOverPage } from '../pages/farmaco-pop-over/farmaco-pop-over';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    TerapiaPage,
+    FarmacoPopOverPage
   ],
   imports: [
     BrowserModule, FormsModule, 
@@ -21,7 +25,9 @@ import { IonicStorageModule } from '@ionic/storage';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    TerapiaPage,
+    FarmacoPopOverPage
   ],
   providers: [
     StatusBar,

@@ -1,0 +1,42 @@
+<!--
+  Generated template for the FarmacoPopOverPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Nuovo farmaco</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Farmaco</ion-label>
+      <ion-input type="text" [(ngModel)]='current.name'></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Quantità</ion-label>
+      <ion-input type="text" [(ngModel)]='current.misura'></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Periodicità</ion-label>
+        <ion-input type="text" [(ngModel)]='current.periodicity'></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label floating>Durata</ion-label>
+          <ion-input type="text" [(ngModel)]='current.span'></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Alert</ion-label>
+            {{current.alert}}
+          </ion-item>
+          <ion-item>
+              <button ion-button (click)='add()'>OK</button>
+            </ion-item>
+  </ion-list>
+</ion-content>
