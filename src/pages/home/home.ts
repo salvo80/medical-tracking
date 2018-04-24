@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
+import { TerapiaPage } from '../terapia/terapia';
 
 @Component({
   selector: 'page-home',
@@ -12,6 +13,7 @@ export class HomePage {
   //lista:Array<string>
 
   constructor(private storage: Storage, public navCtrl: NavController) {
+    navCtrl.push(TerapiaPage)
     //this.lista = []
   }
 
@@ -23,7 +25,7 @@ export class HomePage {
   }
 
   getList(): Array<string>{
-    return []/*this.lista*/
+    return []//this.lista
   }
 
   getProduct(s:string): string {
@@ -35,8 +37,8 @@ export class HomePage {
   }
 
   getTotal():number{
-    //if(this.lista.length==0)
+    
       return 0
-    //return this.lista.map<number>((e)=>this.getPrice(e)).reduce( (prev, curr) => prev + curr)
+    
   }
 }
