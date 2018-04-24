@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, PopoverController } from 'ionic-angular';
 import { AccountProvider } from '../../providers/account/account';
 
 /**
@@ -16,7 +16,8 @@ import { AccountProvider } from '../../providers/account/account';
 })
 export class AccountPage {
   mockList:Array<Account>
-  constructor(private account: AccountProvider, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private account: AccountProvider, public navCtrl: NavController, public navParams: NavParams
+    ,private popoverCtrl: PopoverController) {
     this.mockList = [new Account('1','pippo',false),new Account('2','paperino',true)]
   }
 
@@ -26,6 +27,11 @@ export class AccountPage {
 
   getAccounts(): Array<Account>{
     return this.mockList
+  }
+
+  doAdd(): void{
+    let popover = this.popoverCtrl.create(MyPopOverPage);
+    popover.present();
   }
 
   go(acc): void{

@@ -2,5 +2,16 @@
   "APP":{
     "TITLE":"MyApp",
     "USERS":"There are {{number}} connected "
+  },
+  "account":{
+    "title":"Account",
+    "newtitle":"Nuovo account",
+    "name":"Nome"
+  },
+  "button":{
+    "add":"Aggiungi",
+    "new":"Nuovo",
+    "delete":"Elimina",
+    "ok":"OK"
   }
 }
