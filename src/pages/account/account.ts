@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, PopoverController } from 'ionic-angular';
 import { AccountProvider } from '../../providers/account/account';
+import { AccountDetailComponent } from '../../components/account-detail/account-detail';
+import BLAKE2s from 'blake2s-js';
+import { TerapiaPage } from '../terapia/terapia';
 
 /**
  * Generated class for the AccountPage page.
@@ -16,9 +19,16 @@ import { AccountProvider } from '../../providers/account/account';
 })
 export class AccountPage {
   mockList:Array<Account>
+  
   constructor(private account: AccountProvider, public navCtrl: NavController, public navParams: NavParams
     ,private popoverCtrl: PopoverController) {
-    this.mockList = [new Account('1','pippo',false),new Account('2','paperino',true)]
+    this.mockList = []
+    this.mockList.push(new Account(AccountPage.toHex('pippo'),'pippo',false))
+    this.mockList.push(new Account(AccountPage.toHex('paperino'),'paperino',true))
+  }
+
+  static toHex(s:string): string{
+    return new BLAKE2s(10).update(new TextEncoder().encode(s)).hexDigest()
   }
 
   ionViewDidLoad() {
@@ -30,8 +40,9 @@ export class AccountPage {
   }
 
   doAdd(): void{
-    let popover = this.popoverCtrl.create(MyPopOverPage);
+    let popover = this.popoverCtrl.create(AccountDetailComponent);
     popover.present();
+    popover.onDidDismiss(name => this.mockList.push(new Account(AccountPage.toHex(name),name,false)))
   }
 
   go(acc): void{
@@ -42,7 +53,7 @@ export class AccountPage {
         element.active=false
       }
     });
-    alert("going to "+acc.name+"!")
+    this.navCtrl.push(TerapiaPage)
   }
 
 }

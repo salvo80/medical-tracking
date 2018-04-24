@@ -11,26 +11,23 @@ import { FarmacoPopOverPage } from '../pages/farmaco-pop-over/farmaco-pop-over';
 import { StorageProvider } from '../providers/storage/storage';
 import { AccountProvider } from '../providers/account/account';
 import { AccountPage } from '../pages/account/account';
-<<<<<<< HEAD
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { AccountDetailComponent } from '../components/account-detail/account-detail';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
 }
-=======
-import { HomePage } from '../pages/home/home';
->>>>>>> b61f270d1c9839fff13d697462a22ccc4d044d18
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
     TerapiaPage,
     FarmacoPopOverPage,
-    AccountPage
+    AccountPage,
+    AccountDetailComponent
   ],
   imports: [
     BrowserModule, FormsModule, 
@@ -48,10 +45,10 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
     TerapiaPage,
     FarmacoPopOverPage,
-    AccountPage
+    AccountPage,
+    AccountDetailComponent
   ],
   providers: [
     StatusBar,

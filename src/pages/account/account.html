@@ -12,15 +12,16 @@
 
 </ion-header>
 
-
 <ion-content padding>
   <ion-list>
-    <ion-item>
-      <ion-label fixed>{{"account.name"|translate}}</ion-label>
-      <ion-input type="text" value=""></ion-input>
+    <ion-item *ngFor='let acc of getAccounts()' (click)='go(acc)'>
+        {{acc.name}}
+      <ion-icon hidden="{{acc.active?'':'true'}}" name="checkbox" color="secondary" item-end ></ion-icon>
     </ion-item>
     <ion-item>
-      <button ion-button (click)=doAdd()>{{"button.ok"|translate}}</button>
+      <button ion-button (click)=doAdd()>{{"button.add"|translate}}</button>
     </ion-item>
   </ion-list>
 </ion-content>
+
+
