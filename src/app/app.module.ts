@@ -15,6 +15,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { AccountDetailComponent } from '../components/account-detail/account-detail';
+import { CommonModule } from '@angular/common';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(httpClient: HttpClient) {
@@ -24,13 +25,10 @@ export function createTranslateLoader(httpClient: HttpClient) {
 @NgModule({
   declarations: [
     MyApp,
-    TerapiaPage,
-    FarmacoPopOverPage,
-    AccountPage,
-    AccountDetailComponent
+    AccountPage
   ],
   imports: [
-    BrowserModule, FormsModule, 
+    BrowserModule, FormsModule, CommonModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
@@ -45,10 +43,7 @@ export function createTranslateLoader(httpClient: HttpClient) {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    TerapiaPage,
-    FarmacoPopOverPage,
-    AccountPage,
-    AccountDetailComponent
+    AccountPage
   ],
   providers: [
     StatusBar,
