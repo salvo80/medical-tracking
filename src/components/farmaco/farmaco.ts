@@ -11,12 +11,10 @@ import { Component } from '@angular/core';
   templateUrl: 'farmaco.html'
 })
 export class FarmacoComponent {
-
-  constructor(public name: string
-    , public misura: string
-    , public periodicity:string
-    , public span:string
-    , public alert:boolean) {
-  }
+  public name: string
+  public misura: string
+  public periodicity:string
+  public span:string
+  public alert:boolean
 
 }

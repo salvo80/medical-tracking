@@ -19,7 +19,7 @@ export class FarmacoPopOverPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams
     ,public viewCtrl: ViewController) {
-    this.current = new FarmacoComponent(null,null,null,null,false)
+    this.current = new FarmacoComponent()
   }
 
   ionViewDidLoad() {

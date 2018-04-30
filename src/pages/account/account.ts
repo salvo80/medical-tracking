@@ -4,6 +4,7 @@ import { AccountProvider } from '../../providers/account/account';
 import { AccountDetailComponent } from '../../components/account-detail/account-detail';
 import BLAKE2s from 'blake2s-js';
 import { TerapiaPage } from '../terapia/terapia';
+import TextEncoder from '../../../node_modules/text-encoding';
 
 /**
  * Generated class for the AccountPage page.
