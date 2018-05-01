@@ -25,7 +25,10 @@ export function createTranslateLoader(httpClient: HttpClient) {
 @NgModule({
   declarations: [
     MyApp,
-    AccountPage
+    AccountPage,
+    AccountDetailComponent,
+    TerapiaPage,
+    FarmacoPopOverPage
   ],
   imports: [
     BrowserModule, FormsModule, CommonModule,
@@ -43,7 +46,10 @@ export function createTranslateLoader(httpClient: HttpClient) {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AccountPage
+    AccountPage,
+    AccountDetailComponent,
+    TerapiaPage,
+    FarmacoPopOverPage
   ],
   providers: [
     StatusBar,

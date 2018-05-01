@@ -24,19 +24,16 @@
       <ion-input type="text" [(ngModel)]='current.misura'></ion-input>
     </ion-item>
     <ion-item>
-        <ion-label floating>Periodicità</ion-label>
-        <ion-input type="text" [(ngModel)]='current.periodicity'></ion-input>
-      </ion-item>
-      <ion-item>
-          <ion-label floating>Durata</ion-label>
-          <ion-input type="text" [(ngModel)]='current.span'></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label floating>Alert</ion-label>
-            {{current.alert}}
-          </ion-item>
-          <ion-item>
-              <button ion-button (click)='add()'>OK</button>
-            </ion-item>
+      <ion-label floating>Periodicità</ion-label>
+      <ion-input type="text" [(ngModel)]='current.periodicity'></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Durata</ion-label>
+      <ion-input type="text" [(ngModel)]='current.span'></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <button ion-button (click)='add()'>OK</button>
+    </ion-item>
   </ion-list>
 </ion-content>
